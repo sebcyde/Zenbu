@@ -1,0 +1,22 @@
+.SettingsPage {
+	border: 1px solid red;
+	flex-direction: column;
+	padding-bottom: 60px;
+	min-height: 100vh;
+	display: flex;
+	height: 100%;
+
+	> div {
+		border: 1px solid blue;
+		padding: 10px;
+		margin: 5px;
+		height: 30%;
+	}
+
+	.GeneralSection {
+	}
+	.StocksSection {
+	}
+	.AnimeSection {
+	}
+}

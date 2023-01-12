@@ -8,8 +8,10 @@ type Props = {
 const PerformanceBanner = ({ Quote }: Props) => {
 	return (
 		<div className="PerformanceBanner">
-			<p>Price: ${Quote.c}</p>
-			<p className={Quote.dp < 0 ? 'red' : 'green'}>Change: {Quote.dp}%</p>
+			<p>Price: ${Quote.c.toFixed(2)}</p>
+			<p className={Quote.dp < 0 ? 'red' : 'green'}>
+				Change: {Quote.dp.toFixed(2)}%
+			</p>
 		</div>
 	);
 };

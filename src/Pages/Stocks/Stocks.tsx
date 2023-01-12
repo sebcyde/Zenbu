@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import CPIBanner from '../../Components/Stocks/CPIBanner';
+import ExchangeBanner from '../../Components/Stocks/ExchangeBanner';
 import InsiderTrades from '../../Components/Stocks/InsiderTrades';
 import PerformanceBanner from '../../Components/Stocks/PerformanceBanner';
 import { APIKEY } from '../../Config/Keys';
@@ -17,6 +18,7 @@ type Props = {};
 
 const Stocks = (props: Props) => {
 	const [PortJSX, setPortJSX] = useState<JSX.Element[]>();
+	const ExchangeData = ['GBP', 'EUR', 'JPY'];
 	const [CPI, setCPI] = useState<CPIType[]>();
 	const Portfolio = ['aapl', 'msft', 'tsla'];
 
@@ -46,6 +48,7 @@ const Stocks = (props: Props) => {
 	return (
 		<div>
 			{!CPI ? null : <CPIBanner CPI={CPI} />}
+			<ExchangeBanner CurrencyList={ExchangeData} />
 
 			<>
 				{!PortJSX ? (

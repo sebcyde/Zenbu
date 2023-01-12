@@ -2,6 +2,7 @@ import axios from 'axios';
 import { APIKEY, FHKEY } from '../Config/Keys';
 import {
 	CPIType,
+	ExchangeType,
 	FHQuoteType,
 	GlobalQuoteType,
 	InsiderTradeType,
@@ -39,5 +40,14 @@ export const GetAllNews = async (): Promise<NewsType[]> => {
 		`https://finnhub.io/api/v1/news?category=general&minId=10&token=${FHKEY}`
 	);
 	const Data = GeneralNews.data;
+	return Data;
+};
+
+export const GetExchange = async (Currency: string): Promise<ExchangeType> => {
+	const Response = await axios.get(
+		`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=${Currency}&apikey=${APIKEY}`
+	);
+	const Data = Response.data;
+	console.log('Data:', Data);
 	return Data;
 };
