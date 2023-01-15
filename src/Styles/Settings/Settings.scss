@@ -6,11 +6,43 @@
 	display: flex;
 	height: 100%;
 
+	.UserDisplay {
+		border: 1px solid green;
+	}
+
 	> div {
-		border: 1px solid blue;
-		padding: 10px;
-		margin: 5px;
+		box-sizing: border-box;
+		flex-direction: column;
+		margin: 5px 0px;
+		display: flex;
 		height: 30%;
+		width: 100%;
+
+		&:nth-of-type(1) {
+			margin-top: 0px;
+		}
+
+		h2 {
+			font-size: 18px;
+			color: gray;
+			margin: 10px;
+		}
+
+		span {
+			border-bottom: 1px solid lightgray;
+			padding-bottom: 5px;
+			margin-bottom: 5px;
+			margin-left: 10px;
+			margin-right: 10px;
+			font-weight: 600;
+			font-size: 17px;
+			color: black;
+			display: flex;
+
+			&:nth-last-of-type(1) {
+				border-bottom: none;
+			}
+		}
 	}
 
 	.GeneralSection {

@@ -30,15 +30,15 @@ const StockNews = (props: Props) => {
 
 						return (
 							<div className="NewsArticle" key={Article.id}>
-								<h2>{Article.headline}</h2>
 								<div className="NewsArticleDetails">
-									<div className="ArticleImageContainer">
-										<img src={Article.image} />
-									</div>
+									<h2>{Article.headline}</h2>
 									<div className="ArticleSource">
 										<p>{Article.source}</p>
 										<p>{date.toISOString().slice(0, 10)}</p>
 									</div>
+								</div>
+								<div className="ArticleImageContainer">
+									<img src={Article.image} />
 								</div>
 							</div>
 						);
