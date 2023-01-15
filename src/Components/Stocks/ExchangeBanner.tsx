@@ -33,13 +33,11 @@ const ExchangeBanner = ({ CurrencyList }: Props) => {
 				<div className="ScrollContainer" id="scroll-container">
 					<p id="scroll-text">
 						{ExchangeState?.map((Exchange) => {
-							if (+Exchange['Realtime Currency Exchange Rate'] == undefined)
+							if (Exchange['Realtime Currency Exchange Rate'] == undefined)
 								return;
 							let Rate =
-								+Exchange['Realtime Currency Exchange Rate'][
-									'5. Exchange Rate'
-								];
-
+								Exchange['Realtime Currency Exchange Rate']['5. Exchange Rate'];
+							if (Rate == undefined) return;
 							return (
 								<span>
 									{
@@ -53,7 +51,7 @@ const ExchangeBanner = ({ CurrencyList }: Props) => {
 											'3. To_Currency Code'
 										]
 									}
-									:<p>{Rate.toFixed(2)}</p>
+									:<p>{parseFloat(Rate).toFixed(2)}</p>
 								</span>
 							);
 						})}

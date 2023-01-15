@@ -5,6 +5,7 @@
 	min-height: 100vh;
 	display: flex;
 	height: 100%;
+	color: white;
 
 	.UserDisplay {
 		border: 1px solid green;
@@ -30,14 +31,17 @@
 
 		span {
 			border-bottom: 1px solid lightgray;
-			padding-bottom: 5px;
-			margin-bottom: 5px;
+			height: 40px;
 			margin-left: 10px;
 			margin-right: 10px;
-			font-weight: 600;
+			font-weight: 400;
 			font-size: 17px;
-			color: black;
+			color: white;
 			display: flex;
+			align-items: center;
+			svg {
+				margin-right: 10px;
+			}
 
 			&:nth-last-of-type(1) {
 				border-bottom: none;
