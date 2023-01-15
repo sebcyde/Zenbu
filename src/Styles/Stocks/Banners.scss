@@ -1,3 +1,5 @@
+@import '../Animations.scss';
+
 .CPIBanner {
 	background-color: black;
 	color: white;
@@ -7,16 +9,17 @@
 	justify-content: space-evenly;
 	position: sticky;
 	top: 0px;
+	border-bottom: 1px solid gray;
 }
 
 .PortfolioSectionHeader {
 	width: 100%;
 	text-align: center;
 	padding: 10px 0px;
-	margin-top: 10px;
 	font-size: 20px;
 	text-transform: uppercase;
 	font-weight: 500;
+	color: white;
 }
 
 .DataSectionHeader {
@@ -31,29 +34,27 @@
 
 .StockContainer {
 	width: 95%;
-	background-color: gray;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
 	padding: 5px;
 	margin: 10px auto;
-	box-shadow: 3px 3px 3px gray;
 	border-radius: 10px;
-	border: 1px solid black;
+	border: 1px solid gray;
+	background-color: rgb(37, 37, 37);
 
 	h2 {
 		width: 100%;
 		text-align: center;
-		padding: 5px 0px;
-		color: white;
 		text-transform: uppercase;
 		font-weight: 500;
 		font-size: 20px;
+		color: white;
 	}
 
 	div {
-		background-color: black;
+		background-color: dark;
 		width: calc(100% - 10px);
 		margin: 5px auto;
 	}
@@ -63,9 +64,56 @@
 .InsiderTradesBanner {
 	padding: 0px;
 	color: white;
-	height: 50px;
+	height: 20px;
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	border-radius: 10px;
+	padding: 0px 15px;
+}
+
+.ExchangeBanner {
+	background-color: black;
+	color: white;
+	display: flex;
+	height: 30px;
+	align-items: center;
+	justify-content: space-evenly;
+	position: sticky;
+	top: 0px;
+	border-bottom: 1px solid gray;
+
+	div#scroll-container {
+		border: 3px solid black;
+		border-radius: 5px;
+		overflow: hidden;
+		display: flex;
+
+		#scroll-text {
+			text-align: right;
+			color: white;
+			padding-right: 10px;
+			width: fit-content;
+			white-space: nowrap;
+			display: flex;
+			span {
+				margin: 0px 20px;
+				width: fit-content;
+				display: flex;
+				p {
+					margin: 0;
+					margin-left: 5px;
+				}
+			}
+
+			/* animation properties */
+			-moz-transform: translateX(-100%);
+			-webkit-transform: translateX(-100%);
+			transform: translateX(-100%);
+
+			-moz-animation: my-animation 7s linear infinite;
+			-webkit-animation: my-animation 7s linear infinite;
+			animation: my-animation 7s linear infinite;
+		}
+	}
 }

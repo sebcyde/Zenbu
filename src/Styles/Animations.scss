@@ -1,0 +1,32 @@
+@keyframes my-animation {
+	from {
+		-moz-transform: translateX(-100%);
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	to {
+		-moz-transform: translateX(100%);
+		-webkit-transform: translateX(100%);
+		transform: translateX(75%);
+	}
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+	from {
+		-moz-transform: translateX(-90%);
+	}
+	to {
+		-moz-transform: translateX(100%);
+	}
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+	from {
+		-webkit-transform: translateX(-90%);
+	}
+	to {
+		-webkit-transform: translateX(100%);
+	}
+}
