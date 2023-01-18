@@ -1,7 +1,7 @@
 @import '../Animations.scss';
 
 .CPIBanner {
-	background-color: black;
+	background-color: #111111;
 	color: white;
 	display: flex;
 	height: 50px;
@@ -9,7 +9,6 @@
 	justify-content: space-evenly;
 	position: sticky;
 	top: 0px;
-	border-bottom: 1px solid gray;
 }
 
 .PortfolioSectionHeader {
@@ -73,7 +72,7 @@
 }
 
 .ExchangeBanner {
-	background-color: black;
+	background-color: #111111;
 	color: white;
 	display: flex;
 	height: 30px;
@@ -81,10 +80,8 @@
 	justify-content: space-evenly;
 	position: sticky;
 	top: 0px;
-	border-bottom: 1px solid gray;
 
 	div#scroll-container {
-		border: 3px solid black;
 		border-radius: 5px;
 		overflow: hidden;
 		display: flex;
