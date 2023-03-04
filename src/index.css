@@ -10,6 +10,10 @@ body {
 	background-color: black;
 }
 
+.Page {
+	max-width: 1536px;
+}
+
 .green {
 	color: lime;
 }

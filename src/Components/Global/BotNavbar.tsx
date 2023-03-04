@@ -11,18 +11,20 @@ const BotNavbar = (props: Props) => {
 	const navigate = useNavigate();
 
 	return (
-		<div className="BottomNavbar">
-			<div onClick={() => navigate('/')}>
-				<HomeOutlinedIcon />
-			</div>
-			<div onClick={() => navigate('/stocks')}>
-				<ShowChartIcon />
-			</div>
-			<div onClick={() => navigate('/anime')}>
-				<InsertEmoticonIcon />
-			</div>
-			<div onClick={() => navigate('/settings')}>
-				<SettingsIcon />
+		<div className="BottomNavbar ">
+			<div className="Page">
+				<div onClick={() => navigate('/')}>
+					<HomeOutlinedIcon />
+				</div>
+				<div onClick={() => navigate('/stocks')}>
+					<ShowChartIcon />
+				</div>
+				<div onClick={() => navigate('/anime')}>
+					<InsertEmoticonIcon />
+				</div>
+				<div onClick={() => navigate('/settings')}>
+					<SettingsIcon />
+				</div>
 			</div>
 		</div>
 	);

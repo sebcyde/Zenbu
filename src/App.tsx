@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import BotNavbar from './Components/Global/BotNavbar';
+import TopNav from './Components/Global/TopNav';
 import Anime from './Pages/Anime/Anime';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Error from './Pages/Error/Error';
@@ -11,6 +12,7 @@ import Stocks from './Pages/Stocks/Stocks';
 function App() {
 	return (
 		<div className="App">
+			<TopNav />
 			<Routes>
 				<Route path="/" element={<Dashboard />} />
 				<Route path="/anime" element={<Anime />} />
@@ -20,7 +22,7 @@ function App() {
 				<Route path="/settings" element={<Settings />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
-			<BotNavbar />
+			{/* <BotNavbar /> */}
 		</div>
 	);
 }
