@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PullTopAnimeData } from '../../../Functions/AnimeFunctions';
-import LeftSideBar from './LeftSideBar';
+import LeftSideBar from './LeftSide/LeftSideBar';
 
 type Props = {};
 

@@ -1,16 +1,16 @@
 import { Rating } from '@mui/material';
 import React from 'react';
-import { AnimeType } from '../../../Types/AnimeTypes';
+import { AnimeType } from '../../../../Types/AnimeTypes';
 
 type Props = {
 	Anime: AnimeType;
-	Rank: number;
+	Rank: number | null;
 };
 
 const LeftSideCard = ({ Anime, Rank }: Props) => {
 	return (
 		<div className="LeftSidebarCardContainer">
-			<h2 className="AnimeRank">{Rank}.</h2>
+			{Rank && <h2 className="AnimeRank">{Rank}.</h2>}
 			<img
 				src={
 					Anime.images.webp
