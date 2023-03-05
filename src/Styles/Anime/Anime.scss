@@ -62,6 +62,18 @@
 				}
 			}
 		}
+
+		.ExtendArrow {
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+			display: flex;
+			color: navy;
+			width: 100%;
+			svg {
+				cursor: pointer;
+			}
+		}
 	}
 
 	.CentralSection {
