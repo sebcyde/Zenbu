@@ -126,7 +126,7 @@ function TopNav() {
 						<Button
 							key={'Dashboard'}
 							onClick={() => {
-								handleCloseNavMenu('Dashboard');
+								handleCloseNavMenu('/');
 							}}
 							sx={{ my: 2, color: 'white', display: 'block' }}
 						>
