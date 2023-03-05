@@ -1,6 +1,6 @@
-// .MuiBox-root {
-// 	padding: 10px 0px !important;
-// }
+.MuiTabs-flexContainer {
+	justify-content: center;
+}
 
 .AnimePageNavbar {
 	margin: 0 auto;
@@ -99,5 +99,68 @@
 		padding: 10px;
 
 		border: 1px solid gray;
+	}
+}
+
+.AllAnimePage {
+	padding: 20px;
+	display: flex;
+	width: 100%;
+
+	.LeftSection {
+		flex-direction: column;
+		margin-right: auto;
+		margin-right: 10px;
+		display: flex;
+		min-width: 65%;
+
+		.AZFilter {
+			margin-bottom: 20px;
+			height: 200px;
+			border: 1px solid red;
+		}
+
+		.AnimeList {
+			border: 1px solid blue;
+			height: 100%;
+
+			.AnimeContainer {
+				padding: 10px;
+				display: flex;
+
+				&:nth-of-type(odd) {
+					background-color: lightgray;
+				}
+
+				.ImageContainer {
+					img {
+						max-height: 170px;
+						object-fit: cover;
+						width: 120px;
+					}
+				}
+
+				.AnimeDetailsContainer {
+					flex-direction: column;
+					padding: 0px 10px;
+					display: flex;
+
+					.AnimeTitle {
+						font-weight: 600;
+						color: navy;
+					}
+				}
+			}
+		}
+	}
+	.RightSection {
+		margin-left: 10px;
+		width: 100%;
+
+		.GenreFilter {
+			border: 1px solid green;
+			height: 100%;
+			width: 100%;
+		}
 	}
 }

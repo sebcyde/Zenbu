@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AnimeHome from './Homepage/AnimeHome';
+import AllAnime from './AllAnime/AllAnime';
 
 interface TabPanelProps {
 	children?: React.ReactNode;
@@ -70,7 +71,7 @@ export default function Navbar() {
 				New & Hot
 			</TabPanel>
 			<TabPanel value={value} index={3}>
-				All Anime
+				<AllAnime />
 			</TabPanel>
 			<TabPanel value={value} index={4}>
 				My Watchlists
