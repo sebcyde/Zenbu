@@ -114,11 +114,16 @@
 		display: flex;
 		min-width: 75%;
 
+		.Header {
+			margin: 20px 0px;
+			font-size: 30px;
+			font-weight: 600;
+		}
+
 		.AZFilter {
 			justify-content: space-evenly;
 			border: 1px solid red;
 			flex-direction: column;
-			margin-bottom: 20px;
 			height: fit-content;
 			align-items: center;
 			min-height: 100px;
@@ -133,6 +138,9 @@
 					font-weight: 600;
 					font-size: 22px;
 					color: blue;
+					&.Active {
+						color: red;
+					}
 				}
 			}
 		}
@@ -188,6 +196,11 @@
 				font-weight: 600;
 				font-size: 22px;
 				color: blue;
+				margin: 10px;
+
+				&.Active {
+					color: red;
+				}
 			}
 		}
 	}

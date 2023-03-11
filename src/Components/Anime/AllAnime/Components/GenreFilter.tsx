@@ -30,10 +30,6 @@ const GenreFilter = (props: Props) => {
 		PullData();
 	}, []);
 
-	useEffect(() => {
-		console.log('Current Genre:', CurrentGenre);
-	}, [CurrentGenre]);
-
 	return (
 		<div className="GenreFilter">
 			{Loading ? (
@@ -41,7 +37,12 @@ const GenreFilter = (props: Props) => {
 			) : (
 				AllGenres.map((Genre) => {
 					return (
-						<p onClick={() => UpdateGenreFilter(Genre.name)}>{Genre.name}</p>
+						<p
+							className={CurrentGenre.Genre == Genre.name ? 'Active' : ''}
+							onClick={() => UpdateGenreFilter(Genre.name)}
+						>
+							{Genre.name}
+						</p>
 					);
 				})
 			)}
