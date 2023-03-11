@@ -5,6 +5,7 @@ import {
 	LetterFilter,
 	SetLetterFilter,
 } from '../../../../Store/Slices/AnimeLetterFilterSlice';
+import { SetGenreFilter } from '../../../../Store/Slices/AnimeGenreFilterSlice';
 
 type Props = {};
 
@@ -14,6 +15,7 @@ const AZFilter = (props: Props) => {
 
 	const ChangeFilterLetter = (NewLetter: string) => {
 		dispatch(SetLetterFilter(NewLetter));
+		dispatch(SetGenreFilter(null));
 	};
 
 	useEffect(() => {

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AnimeType, RawAnimeListType } from '../Types/AnimeTypes';
+import { AnimeGenre, AnimeType, RawAnimeListType } from '../Types/AnimeTypes';
 
 export const PullTopAnimeData = async () => {
 	console.log('Pulling New Anime Data');
@@ -22,6 +22,13 @@ export const PullAnimeDataByLetter = async (Letter: string) => {
 		params: { letter: Letter },
 	});
 	let FullList: AnimeType[] = [...Res.data.data];
-	console.log('Full Anime List:', Res);
+	console.log(`Full Anime List Letter: ${Letter}:`, Res);
+	return FullList;
+};
+
+export const PullAnimeGenres = async () => {
+	const Res = await axios.get('https://api.jikan.moe/v4/genres/anime');
+	let FullList: AnimeGenre[] = [...Res.data.data];
+	console.log('Full Genre List:', Res);
 	return FullList;
 };

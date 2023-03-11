@@ -270,3 +270,10 @@ export type AnimeType = {
 		}
 	];
 };
+
+export type AnimeGenre = {
+	mal_id: number;
+	name: string;
+	url: string;
+	count: number;
+};
