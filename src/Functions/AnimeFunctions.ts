@@ -9,17 +9,19 @@ export const PullTopAnimeData = async () => {
 };
 
 export const PullAllAnimeData = async () => {
-	const Res = await axios.get('https://api.jikan.moe/v4/anime?page=6');
+	const Res = await axios.get('https://api.jikan.moe/v4/anime', {
+		params: { order_by: 'title' },
+	});
 	let FullList: AnimeType[] = [...Res.data.data];
-	console.log('Full Anime List:', Res.data);
+	console.log('Full Anime List:', Res);
 	return FullList;
-
-	// Need to pull all pages and concat?
-	// const FullList = await Promise.all(() => {});
 };
 
-export const JoinPages = async () => {
-	const Res = await axios.get('https://api.jikan.moe/v4/anime');
+export const PullAnimeDataByLetter = async (Letter: string) => {
+	const Res = await axios.get('https://api.jikan.moe/v4/anime', {
+		params: { letter: Letter },
+	});
 	let FullList: AnimeType[] = [...Res.data.data];
-	console.log('Full Anime List:', FullList);
+	console.log('Full Anime List:', Res);
+	return FullList;
 };

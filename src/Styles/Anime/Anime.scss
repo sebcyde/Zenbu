@@ -115,9 +115,26 @@
 		min-width: 65%;
 
 		.AZFilter {
-			margin-bottom: 20px;
-			height: 200px;
+			justify-content: space-evenly;
 			border: 1px solid red;
+			flex-direction: column;
+			margin-bottom: 20px;
+			height: fit-content;
+			align-items: center;
+			min-height: 100px;
+			display: flex;
+
+			.LetterContainer {
+				justify-content: space-evenly;
+				display: flex;
+				width: 100%;
+				p {
+					text-decoration: underline;
+					font-weight: 600;
+					font-size: 22px;
+					color: blue;
+				}
+			}
 		}
 
 		.AnimeList {
