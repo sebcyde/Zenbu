@@ -1,5 +1,5 @@
 import React from 'react';
-import { FHQuoteType, GlobalQuoteType } from '../../Types/StockTypes';
+import { FHQuoteType, GlobalQuoteType } from '../../../Types/StockTypes';
 
 type Props = {
 	Quote: FHQuoteType;

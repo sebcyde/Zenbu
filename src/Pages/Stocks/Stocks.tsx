@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import CPIBanner from '../../Components/Stocks/CPIBanner';
-import ExchangeBanner from '../../Components/Stocks/ExchangeBanner';
+import CPIBanner from '../../Components/Stocks/News/CPIBanner';
+import ExchangeBanner from '../../Components/Stocks/News/ExchangeBanner';
 import InsiderTrades from '../../Components/Stocks/InsiderTrades';
-import PerformanceBanner from '../../Components/Stocks/PerformanceBanner';
+import Navbar from '../../Components/Stocks/Navbar';
+import PerformanceBanner from '../../Components/Stocks/Portfolio/PerformanceBanner';
 import { APIKEY } from '../../Config/Keys';
 import {
 	GetAllNews,
@@ -46,8 +47,9 @@ const Stocks = (props: Props) => {
 	}, []);
 
 	return (
-		<div>
-			{!CPI ? null : <CPIBanner CPI={CPI} />}
+		<div className="StocksPage">
+			<Navbar />
+			{/* {!CPI ? null : <CPIBanner CPI={CPI} />} */}
 			<ExchangeBanner CurrencyList={ExchangeData} />
 
 			<>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { GetExchange } from '../../Functions/StockFunctions';
-import { ExchangeType } from '../../Types/StockTypes';
+import { GetExchange } from '../../../Functions/StockFunctions';
+import { ExchangeType } from '../../../Types/StockTypes';
 
 type Props = {
 	CurrencyList: string[];
