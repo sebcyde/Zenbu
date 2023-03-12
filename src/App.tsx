@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import BotNavbar from './Components/Global/BotNavbar';
 import TopNav from './Components/Global/TopNav';
 import Anime from './Pages/Anime/Anime';
+import SignIn from './Pages/Authentication/SignIn';
+import SignUp from './Pages/Authentication/SignUp';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Error from './Pages/Error/Error';
 import Settings from './Pages/Settings/Settings';
@@ -15,6 +17,8 @@ function App() {
 			<TopNav />
 			<Routes>
 				<Route path="/" element={<Dashboard />} />
+				<Route path="/signin" element={<SignIn />} />
+				<Route path="/signup" element={<SignUp />} />
 				<Route path="/anime" element={<Anime />} />
 				<Route path="/stocks" element={<Stocks />}>
 					<Route path="news" element={<StockNews />} />

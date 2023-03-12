@@ -188,6 +188,8 @@
 					font-weight: 600;
 					font-size: 22px;
 					color: blue;
+					cursor: pointer;
+
 					&.Active {
 						color: red;
 					}
@@ -247,6 +249,7 @@
 				font-size: 22px;
 				color: blue;
 				margin: 10px;
+				cursor: pointer;
 
 				&.Active {
 					color: red;
