@@ -150,6 +150,15 @@ function TopNav() {
 						>
 							Stocks
 						</Button>
+						<Button
+							key={'Settings'}
+							onClick={() => {
+								handleCloseNavMenu('Settings');
+							}}
+							sx={{ my: 2, color: 'white', display: 'block' }}
+						>
+							Settings
+						</Button>
 					</Box>
 
 					<Box sx={{ flexGrow: 0 }}>
