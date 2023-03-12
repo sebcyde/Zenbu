@@ -99,6 +99,56 @@
 		padding: 10px;
 
 		border: 1px solid gray;
+
+		.RightSideBoxContainer {
+			border: 1px solid gray;
+			margin-top: 20px;
+			width: 100%;
+
+			&:nth-of-type(1) {
+				margin-top: 0px;
+			}
+
+			.RightSidebarTitle {
+				background-color: #1976d2;
+				font-size: 20px;
+				padding: 0px 10px;
+				color: white;
+				width: 100%;
+			}
+
+			.CharacterImageContainer {
+				border: 3px solid black;
+				width: calc(100% - 40px);
+				justify-content: center;
+				object-fit: cover;
+				max-height: 300px;
+				margin: 20px auto;
+				overflow: hidden;
+				display: flex;
+
+				img {
+					object-fit: cover;
+					height: 100%;
+					width: 100%;
+				}
+			}
+
+			.CharacterName {
+				margin-bottom: 20px;
+				text-align: center;
+				font-weight: 600;
+				font-size: 25px;
+				width: 100%;
+			}
+
+			.CharacterAbout {
+				text-align: center;
+				margin: 0px auto;
+				margin-bottom: 20px;
+				width: 90%;
+			}
+		}
 	}
 }
 

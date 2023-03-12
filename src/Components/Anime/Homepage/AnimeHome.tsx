@@ -5,25 +5,27 @@ import {
 } from '../../../Functions/AnimeFunctions';
 import CenterSection from './Center/CenterSection';
 import LeftSideBar from './LeftSide/LeftSideBar';
+import CharacterOfTheDay from './RightSide/CharacterOfTheDay';
+import RightSection from './RightSide/RightSection';
 
 type Props = {};
 
 const AnimeHome = (props: Props) => {
-	const [AnimeListData, setAnimeListData] = useState([]);
+	const [TopAnimeListData, setTopAnimeListData] = useState([]);
 	const [AllAnime, setAllAnime] = useState([]);
 	const [Loading, setLoading] = useState<boolean>(true);
 
 	const Pulldata = async () => {
-		const NewAnimeData = await PullTopAnimeData();
-		// const AllAnimeData = await PullAllAnimeData();
-		setAnimeListData(NewAnimeData);
-		// setAllAnime(AllAnimeData);
+		const TopAnimeData = await PullTopAnimeData();
+
+		setTopAnimeListData(TopAnimeData);
+
 		setLoading(false);
 	};
 
-	// useEffect(() => {
-	// 	Pulldata();
-	// }, []);
+	useEffect(() => {
+		Pulldata();
+	}, []);
 
 	return Loading ? (
 		<div>
@@ -32,9 +34,9 @@ const AnimeHome = (props: Props) => {
 	) : (
 		<>
 			<div className="AnimeHomePage">
-				<LeftSideBar AnimeList={AnimeListData} />
-				<CenterSection AnimeList={AnimeListData} />
-				<div className="RightSectionContainer">Right Section</div>
+				<LeftSideBar AnimeList={TopAnimeListData} />
+				<CenterSection AnimeList={TopAnimeListData} />
+				<RightSection />
 			</div>
 		</>
 	);
