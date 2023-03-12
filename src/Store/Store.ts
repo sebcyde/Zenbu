@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import AnimeLetterFilterSlice from './Slices/AnimeLetterFilterSlice';
 import GenreFilterSlice from './Slices/AnimeGenreFilterSlice';
+import WindowStateSlice from './Slices/SettingsWindowSlice';
 
 export const store = configureStore({
 	reducer: {
 		AnimeLetterFilter: AnimeLetterFilterSlice,
 		AnimeGenreFilter: GenreFilterSlice,
+		SettingsWindowState: WindowStateSlice,
 	},
 });
 

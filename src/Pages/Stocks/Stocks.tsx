@@ -19,7 +19,7 @@ type Props = {};
 
 const Stocks = (props: Props) => {
 	return (
-		<div className="StocksPage">
+		<div className="Page">
 			<Navbar />
 		</div>
 	);
