@@ -6,7 +6,6 @@
 	margin: 0px auto;
 	display: flex;
 	height: 100%;
-	background-color: $MainAccent;
 
 	.SignUpBox {
 		box-shadow: 2px 2px 2px gray;
@@ -42,9 +41,9 @@
 				color: gray;
 			}
 
-			&:nth-last-of-type(1) {
-				display: none;
-			}
+			// &:nth-last-of-type(1) {
+			// 	display: none;
+			// }
 		}
 
 		label {
@@ -84,7 +83,6 @@
 	margin: 0px auto;
 	display: flex;
 	height: 100%;
-	background-color: $MainAccent;
 
 	.SignUpBox {
 		box-shadow: 2px 2px 2px gray;
