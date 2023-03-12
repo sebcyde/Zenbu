@@ -10,7 +10,7 @@ import SignUp from './Pages/Authentication/SignUp';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Error from './Pages/Error/Error';
 import Settings from './Pages/Settings/Settings';
-import StockNews from './Pages/Stocks/AllNews';
+import StockNews from './Components/Stocks/News/AllNews';
 import Stocks from './Pages/Stocks/Stocks';
 
 function App() {

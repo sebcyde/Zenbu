@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { GetAllNews } from '../../Functions/StockFunctions';
-import { NewsType } from '../../Types/StockTypes';
+import { GetAllNews } from '../../../Functions/StockFunctions';
+import { NewsType } from '../../../Types/StockTypes';
 
 type Props = {};
 

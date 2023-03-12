@@ -2,18 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { GetExchange } from '../../../Functions/StockFunctions';
 import { ExchangeType } from '../../../Types/StockTypes';
 
-type Props = {
-	CurrencyList: string[];
-};
+const ExchangeBanner = () => {
+	const ExchangeData = ['GBP', 'EUR', 'JPY'];
 
-const ExchangeBanner = ({ CurrencyList }: Props) => {
 	const [ExchangeState, setExchangeState] = useState<
 		ExchangeType[] | undefined
 	>(undefined);
 
 	const Exchange = async () => {
 		const Data = await Promise.all(
-			CurrencyList.map(async (Currency: string) => {
+			ExchangeData.map(async (Currency: string) => {
 				let Response = await GetExchange(Currency);
 				console.log(Response);
 				return Response;

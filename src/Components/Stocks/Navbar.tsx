@@ -4,6 +4,9 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import CPIBanner from './News/CPIBanner';
+import ExchangeBanner from './News/ExchangeBanner';
+import PortList from './Portfolio/PortList';
+import AllNews from './News/AllNews';
 
 interface TabPanelProps {
 	children?: React.ReactNode;
@@ -60,11 +63,12 @@ export default function Navbar() {
 			</Box>
 			<TabPanel value={value} index={0}></TabPanel>
 			<TabPanel value={value} index={1}>
-				News
 				<CPIBanner />
+				<ExchangeBanner />
+				<AllNews />
 			</TabPanel>
 			<TabPanel value={value} index={2}>
-				Portfolio
+				<PortList />
 			</TabPanel>
 			{/* <TabPanel value={value} index={3}></TabPanel>
 			<TabPanel value={value} index={4}>
