@@ -2,12 +2,12 @@ import { SettingsWindowState } from '../../Store/Slices/SettingsWindowSlice';
 import { useSelector } from 'react-redux';
 import UserDisplay from './UserDisplay';
 import React, { useEffect, useState } from 'react';
-import ProfileData from './WindowPages/ProfileData';
-import Payments from './WindowPages/Payments';
-import AnimeSettings from './WindowPages/AnimeSettings';
-import StockSettings from './WindowPages/StockSettings';
-import GeneralSettings from './WindowPages/GeneralSettings';
-import AccountDetails from './WindowPages/AccountDetails';
+import ProfileData from './WindowPages/TopLevelWindows/ProfileData';
+import Payments from './WindowPages/TopLevelWindows/Payments';
+import AnimeSettings from './WindowPages/TopLevelWindows/AnimeSettings';
+import StockSettings from './WindowPages/TopLevelWindows/StockSettings';
+import GeneralSettings from './WindowPages/TopLevelWindows/GeneralSettings';
+import AccountDetails from './WindowPages/TopLevelWindows/AccountDetails';
 
 type Props = {};
 

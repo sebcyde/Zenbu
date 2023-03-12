@@ -7,9 +7,28 @@
 	width: 100%;
 
 	.UserDisplay {
+		justify-content: space-evenly;
 		border: 1px solid green;
 		min-height: 150px;
+		padding: 20px;
+		display: flex;
 		width: 100%;
+
+		&.LoadingDisplay {
+			justify-content: center;
+			align-items: center;
+		}
+
+		.LeftSection {
+			flex: 1;
+
+			h2 {
+				text-transform: capitalize;
+			}
+		}
+		.RightSection {
+			flex: 1;
+		}
 	}
 
 	.SettingsMenu {
@@ -87,6 +106,16 @@
 	.SettingsWindow {
 		height: fit-content;
 		flex: 2;
+
+		> div:nth-of-type(2) {
+			padding: 20px;
+
+			h2 {
+				text-align: center;
+				font-weight: 600;
+				width: 100%;
+			}
+		}
 	}
 
 	.GeneralSection {
