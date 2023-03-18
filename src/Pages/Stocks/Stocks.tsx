@@ -4,7 +4,7 @@ import CPIBanner from '../../Components/Stocks/News/CPIBanner';
 import ExchangeBanner from '../../Components/Stocks/News/ExchangeBanner';
 import InsiderTrades from '../../Components/Stocks/InsiderTrades';
 import Navbar from '../../Components/Stocks/Navbar';
-import PerformanceBanner from '../../Components/Stocks/Portfolio/PerformanceBanner';
+import PerformanceBanner from '../../Components/Stocks/Portfolio/All/PerformanceBanner';
 import { APIKEY } from '../../Config/Keys';
 import {
 	GetAllNews,

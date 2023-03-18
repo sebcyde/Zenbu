@@ -3,11 +3,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import CPIBanner from './News/CPIBanner';
-import ExchangeBanner from './News/ExchangeBanner';
-import PortList from './Portfolio/All/PortList';
-import AllNews from './News/AllNews';
-import Portfolio from '../../Pages/Stocks/Portfolio';
+import PortList from './All/PortList';
+import SearchBar from './Search/SearchBar';
+
+type Props = {};
 
 interface TabPanelProps {
 	children?: React.ReactNode;
@@ -42,7 +41,7 @@ function a11yProps(index: number) {
 	};
 }
 
-export default function Navbar() {
+const Navbar = (props: Props) => {
 	const [value, setValue] = React.useState(0);
 
 	const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -57,24 +56,21 @@ export default function Navbar() {
 					onChange={handleChange}
 					aria-label="basic tabs example"
 				>
-					<Tab label="Home" {...a11yProps(0)} />
-					<Tab label="News" {...a11yProps(1)} />
-					<Tab label="Portfolio" {...a11yProps(2)} />
+					<Tab label="All" {...a11yProps(0)} />
+					<Tab label="Search" {...a11yProps(1)} />
 				</Tabs>
 			</Box>
-			<TabPanel value={value} index={0}></TabPanel>
+			<TabPanel value={value} index={0}>
+				{/* All */}
+				<PortList />
+			</TabPanel>
+
 			<TabPanel value={value} index={1}>
-				<CPIBanner />
-				<ExchangeBanner />
-				<AllNews />
+				{/* Search */}
+				<SearchBar />
 			</TabPanel>
-			<TabPanel value={value} index={2}>
-				<Portfolio />
-			</TabPanel>
-			{/* <TabPanel value={value} index={3}></TabPanel>
-			<TabPanel value={value} index={4}>
-				My Watchlists
-			</TabPanel> */}
 		</Box>
 	);
-}
+};
+
+export default Navbar;

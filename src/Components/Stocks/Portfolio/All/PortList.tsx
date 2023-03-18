@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { GetFHQuote, GetInsiderTrades } from '../../../Functions/StockFunctions';
-import InsiderTrades from '../InsiderTrades';
+import {
+	GetFHQuote,
+	GetInsiderTrades,
+} from '../../../../Functions/StockFunctions';
+import InsiderTrades from '../../InsiderTrades';
 import PerformanceBanner from './PerformanceBanner';
 
 type Props = {};
