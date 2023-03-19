@@ -4,7 +4,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import PortList from './All/PortList';
-import SearchBar from './Search/SearchBar';
+import Search from './Search/Search';
 
 type Props = {};
 
@@ -67,7 +67,7 @@ const Navbar = (props: Props) => {
 
 			<TabPanel value={value} index={1}>
 				{/* Search */}
-				<SearchBar />
+				<Search />
 			</TabPanel>
 		</Box>
 	);

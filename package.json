@@ -27,6 +27,7 @@
     "react-spinners": "^0.13.8",
     "sass": "^1.57.1",
     "sort-by": "^1.2.0",
+    "use-debounce": "^9.0.3",
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
